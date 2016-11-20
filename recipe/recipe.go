@@ -2,7 +2,15 @@ package recipe
 
 import "regexp"
 
-// Compile a regexp for parsing Ingredient details.
+/*
+ * Compile a regexp for parsing Ingredient details. The expected format is
+ * similar to that used by the Pyprika library for python. A line like
+ *
+ * (1 cup) Heavy Cream
+ *
+ * Should match three groups: (1) (cup) (Heavy Cream) which can then be stored
+ * in the Ingredient type with Amount: 1, Unit: cup, Label: Heavy Cream
+ */
 var ingredientExp = regexp.MustCompile(`^\((?P<Amount>.+)\s(?P<Unit>.+)\)\s+(?P<Label>.*)$`)
 
 // Define a struct for Recipes.
