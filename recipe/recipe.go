@@ -34,6 +34,13 @@ type Ingredient struct {
 }
 
 func (r *Recipe) ParseIngredientsList() {
+	/*
+	 * Convert the raw list of ingredient strings Unmarshaled from the YAML file
+	 * to an array of Ingredient types. If the provided does not match the expected
+	 * pattern it will be stored in an Ingredient where the Amount and Unit are
+	 * empty, and the whole line will be stored as the Label.
+	 */
+
 	var parsed_ingredients []Ingredient
 
 	for _, ingredient := range r.Ingredients {
