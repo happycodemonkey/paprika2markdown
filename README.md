@@ -28,4 +28,4 @@ If the output folder provided does not already exist the program will prompt the
 
 ## Testing
 
-Tests are written using ginkgo / gomega. Run tests with `ginkgo` or `go testgit td`
+Tests are written using ginkgo / gomega. Run tests with `ginkgo` or `go test`
