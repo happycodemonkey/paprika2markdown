@@ -2,3 +2,8 @@ language: go
 
 go :
   - 1.6.3
+
+install:
+  - go get github.com/onsi/ginkgo
+  - go get github.com/onsi/gomega
+  - go get gopkg.in/yaml.v2
