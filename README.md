@@ -1,5 +1,7 @@
 # paprika2markdown
 
+[![Build Status](https://travis-ci.org/compybara/paprika2markdown.svg?branch=master)](https://travis-ci.org/compybara/paprika2markdown)
+
 This utility is designed to parse recipes stored in the YAML formats used by [Paprika](https://paprikaapp.com/help/mac/#importrecipes) or [Pyprika](http://pyprika.readthedocs.io/en/latest/yaml-spec.html) and translate them into human-readable Markdown documents using a template.
 
 You can use the templates included in the `templates/` directory, or provide your own.
@@ -26,4 +28,4 @@ If the output folder provided does not already exist the program will prompt the
 
 ## Testing
 
-Tests are written using ginkgo / gomega. Run tests with `ginkgo` or `go test`
+Tests are written using ginkgo / gomega. Run tests with `ginkgo` or `go testgit td`
