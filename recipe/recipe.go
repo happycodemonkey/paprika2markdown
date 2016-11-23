@@ -17,6 +17,7 @@ var ingredientExp = regexp.MustCompile(`^\((?P<Amount>.+)\s(?P<Unit>.+)\)\s+(?P<
 type Recipe struct {
 	Name            string   `yaml:"name"`
 	Notes           string   `yaml:"notes"`
+	Source          string   `yaml:"source"`
 	SourceURL       string   `yaml:"source_url"`
 	Servings        []int    `yaml:"servings"`
 	PrepTime        string   `yaml:"prep_time"`
@@ -57,9 +58,6 @@ func (r *Recipe) ParseIngredientsList() {
 					Unit:   "",
 					Label:  ingredient,
 				})
-			} else {
-				// Empty string, so skip this ingredient.
-				continue
 			}
 		} else {
 			parsed_ingredients = append(parsed_ingredients, Ingredient{
