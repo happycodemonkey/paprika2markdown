@@ -14,7 +14,7 @@ To install this utility first ensure that Go is [installed](https://golang.org/d
 
 paprika2markdown reads all `.yml` or `.yaml` files from a given directory of recipes and outputs markdown files to the specified output folder. The recipes folder and the template must exist and be readable or the program will not run.
 
-If the output folder provided does not already exist the program will prompt the user at runtime for permission to create it. Any existing files in the output folder will be overwritten. 
+If the output folder provided does not already exist the program will prompt the user at runtime for permission to create it. Any existing files in the output folder will be overwritten.
 
     Usage of ./paprika2markdown:
     -o string
@@ -23,3 +23,7 @@ If the output folder provided does not already exist the program will prompt the
       The folder containing the recipe YAML files. (default "./recipes")
     -t string
       The template to use for generating output. (default "./templates/template.md")
+
+## Testing
+
+Tests are written using ginkgo / gomega. Run tests with `ginkgo` or `go test`
